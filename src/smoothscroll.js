@@ -296,12 +296,41 @@ function polyfill() {
       return;
     }
 
+    var tmpLeft = ~~arguments[0].left + (w.scrollX || w.pageXOffset);
+    var tmpTop = ~~arguments[0].top + (w.scrollY || w.pageYOffset);
+
+    if (
+      typeof arguments[0].block !== 'undefined' &&
+      typeof arguments[0].inline === 'undefined') {
+      if (arguments[0].block === 'center') {
+        tmpTop -= Math.abs(w.innerHeight) / 2;
+        tmpTop = Math.max(0, tmpTop);
+      } else if (
+        arguments[0].block === 'bottom' ||
+        arguments[0].block === 'nearest') {
+        // eslint-disable-next-line no-warning-comments
+        // TODO...
+      }
+    } else if (
+      typeof arguments[0].block === 'undefined' &&
+      typeof arguments[0].inline !== 'undefined') {
+      if (arguments[0].inline === 'center') {
+        tmpLeft -= Math.abs(w.innerWidth) / 2;
+        tmpLeft = Math.max(0, tmpTop);
+      } else if (
+        arguments[0].inline === 'bottom' ||
+        arguments[0].inline === 'nearest') {
+        // eslint-disable-next-line no-warning-comments
+        // TODO...
+      }
+    }
+
     // LET THE SMOOTHNESS BEGIN!
     smoothScroll.call(
       w,
       d.body,
-      ~~arguments[0].left + (w.scrollX || w.pageXOffset),
-      ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+      tmpLeft,
+      tmpTop
     );
   };
 
@@ -406,7 +435,9 @@ function polyfill() {
         w.scrollBy({
           left: parentRects.left,
           top: parentRects.top,
-          behavior: 'smooth'
+          behavior: 'smooth',
+          block: arguments[0].block,
+          inline: arguments[0].inline
         });
       }
     } else {
@@ -414,7 +445,9 @@ function polyfill() {
       w.scrollBy({
         left: clientRects.left,
         top: clientRects.top,
-        behavior: 'smooth'
+        behavior: 'smooth',
+        block: arguments[0].block,
+        inline: arguments[0].inline
       });
     }
   };
