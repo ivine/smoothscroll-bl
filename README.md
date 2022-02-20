@@ -8,10 +8,10 @@ The [Scroll Behavior specification](https://developer.mozilla.org/en/docs/Web/CS
 
 ```sh
 # npm
-npm install smoothscroll-bl --save
+npm install smoothscroll-bl-polyfill --save
 
 # yarn
-yarn add smoothscroll-bl
+yarn add smoothscroll-bl-polyfill
 ```
 
 When including the polyfill in a script tag, it will run immediately after loaded.
@@ -19,7 +19,7 @@ When including the polyfill in a script tag, it will run immediately after loade
 If you are importing it as a dependency, make sure to call the `polyfill` method:
 
 ```js
-import smoothscroll from 'smoothscroll-bl';
+import smoothscroll from 'smoothscroll-bl-polyfill';
 
 // kick off the polyfill!
 smoothscroll.polyfill();
