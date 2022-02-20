@@ -2,19 +2,16 @@
 
 The [Scroll Behavior specification](https://developer.mozilla.org/en/docs/Web/CSS/scroll-behavior) has been introduced as an extension of the `Window` interface to allow for the developer to opt in to native smooth scrolling. To date this has only been implemented in [_Chrome_, _Firefox_ and _Opera_](https://caniuse.com/#feat=css-scroll-behavior).
 
-Check out all the methods covered here: https://iamdustan.github.io/smoothscroll
 
 
 ## Installation and use
 
-Download the production ready file [here](https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js) and include it in your project, or install it as a package.
-
 ```sh
 # npm
-npm install smoothscroll-polyfill --save
+npm install smoothscroll-bl --save
 
 # yarn
-yarn add smoothscroll-polyfill
+yarn add smoothscroll-bl
 ```
 
 When including the polyfill in a script tag, it will run immediately after loaded.
@@ -22,7 +19,7 @@ When including the polyfill in a script tag, it will run immediately after loade
 If you are importing it as a dependency, make sure to call the `polyfill` method:
 
 ```js
-import smoothscroll from 'smoothscroll-polyfill';
+import smoothscroll from 'smoothscroll-bl';
 
 // kick off the polyfill!
 smoothscroll.polyfill();

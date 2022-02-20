@@ -1,8 +1,8 @@
 {
-  "title": "smoothscroll",
-  "name": "smoothscroll-polyfill",
+  "title": "smoothscroll-bl",
+  "name": "smoothscroll-bl-polyfill",
   "description": "Smooth Scroll behavior polyfill",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "author": {
     "name": "Dustan Kasten",
     "email": "dustan.kasten@gmail.com",
@@ -13,6 +13,10 @@
       "name": "Jeremias Menichelli",
       "email": "jmenichelli@gmail.com",
       "url": "https://jeremenichelli.io"
+    },
+    {
+      "name": "Dwwwwww",
+      "email": "vinzry@gmail.com"
     }
   ],
   "dependencies": {},
@@ -56,7 +60,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamdustan/smoothscroll.git"
+    "url": "git+https://github.com/ivine/smoothscroll-bl.git"
   },
   "keywords": [
     "smooth",
@@ -66,7 +70,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamdustan/smoothscroll/issues"
+    "url": "https://github.com/ivine/smoothscroll-bl/issues"
   },
-  "homepage": "https://iamdustan.com/smoothscroll"
+  "homepage": "https://github.com/ivine/smoothscroll-bl"
 }
